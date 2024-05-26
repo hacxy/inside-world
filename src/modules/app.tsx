@@ -1,7 +1,12 @@
 import React from 'react';
-import {Box, Text, useApp, useInput} from 'ink';
+import {Box, Text, useInput, useApp} from 'ink';
+import {Player} from '../units/index.js';
 
-export default function App() {
+interface Props extends Player {}
+
+export default function App(props: Props) {
+	const {name} = props;
+
 	const {exit} = useApp();
 
 	useInput(input => {
@@ -11,9 +16,17 @@ export default function App() {
 	});
 
 	return (
-		<Box flexDirection="column" alignItems="center" justifyContent="center">
-			<Text>Hello World!</Text>
-			<Text>Press 'q' to exit.</Text>
+		<Box
+			height={'100%'}
+			width={'100%'}
+			padding={10}
+			flexDirection="column"
+			alignItems="center"
+			justifyContent="center"
+			borderStyle={'round'}
+		>
+			<Text>{name}, 欢迎进入里世界!</Text>
+			<Text>按 'q' 退出</Text>
 		</Box>
 	);
 }
