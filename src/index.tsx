@@ -15,7 +15,6 @@ const bootstrap = async () => {
 	}
 
 	const player = new Player(playerName);
-
 	render(<App {...player} />);
 };
 
