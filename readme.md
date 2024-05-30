@@ -1,4 +1,4 @@
-# cli-ink-template
+# inside world
 
 ```bash
 npm install
