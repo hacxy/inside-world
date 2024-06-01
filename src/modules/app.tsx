@@ -25,7 +25,7 @@ export default function App(props: Props) {
 			justifyContent="center"
 			borderStyle={'round'}
 		>
-			<Text>{name}, 欢迎进入里世界!</Text>
+			<Text>欢迎，{name}</Text>
 			<Text>按 'q' 退出</Text>
 		</Box>
 	);
